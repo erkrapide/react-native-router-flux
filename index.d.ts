@@ -141,15 +141,15 @@ export type Actions = ActionsGenericStatic;
 interface ActionsStatic {
     currentScene: any;
     jump: (sceneKey: string, props?: any) => void;
-    pop: () => void;
+    pop: (props?: any) => void;
     popAndPush: (sceneKey: string, props?: any) => void;
     popTo: (sceneKey: string, props?: any) => void;
     push: (sceneKey: string, props?: any) => void;
     refresh: (props?: any) => void;
     replace: (sceneKey: string, props?: any) => void;
     reset: (sceneKey: string, props?: any) => void;
-    drawerOpen?: any;
-    drawerClose?: any;
+    drawerOpen?: () => void;
+    drawerClose?: () => void;
 
 }
 interface ActionsGenericStatic extends ActionsStatic {
